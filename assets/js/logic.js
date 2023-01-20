@@ -25,8 +25,25 @@ function questionClick(){
 
 }
 
-function clockTick(){
+function quizEnd(){
+    clearInterval(timerID);
 
+    let endScreenElement = document.getElementById("end-screen");
+    endScreenElement.removeAttribute("class");
+
+    let finalScoreElement = document.getElementById("final-score");
+    finalScoreElement.textContent = time;
+
+    questionsElement.setAttribute("class", "hide");
+}
+
+function clockTick(){
+    time--;
+    timerElement.textContent = time;
+
+    if(time <= 0){
+        quizEnd();
+        }
 }
 //function of behaviour when user selects start button on the index.html webpage
 function startQuiz(){
@@ -37,12 +54,6 @@ function startQuiz(){
 
     timerID = setInterval(clockTick, 1000)
 }
-
-function quizEnd(){
-
-}
-
-
 
 function saveHighScore(){
 
