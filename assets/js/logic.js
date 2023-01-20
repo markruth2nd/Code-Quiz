@@ -17,6 +17,24 @@ let sfxRight = new Audio("assets/sfx/correct.wav");
 let sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 //Quiz fuctions:
+
+function questionClick(){
+    if(this.value !== questions[currentQuestionIndex].answer) {
+        time -= 15;
+
+    if(time < 0) {
+        time = 0;
+    }
+    timerElement.textContent = time;
+
+    feedBackElement.textContent = "Wrong"
+    sfxWrong.play();
+    } else {
+        sfxRight.play();
+        feedBackElement.textContent = "Correct!";
+    }
+}
+
 function getQuestion(){
     let currentQuestion = questions[currentQuestionIndex];
 
@@ -37,10 +55,6 @@ function getQuestion(){
 
         choicesElement.appendChild(choiceButton);
     })
-}
-
-function questionClick(){
-
 }
 
 function quizEnd(){
