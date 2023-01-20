@@ -11,3 +11,8 @@ let submitButton = document.getElementById("submit");
 let startButton = document.getElementById("start");
 let initialElement = document.getElementById("initials");
 let feedBackElement = document.getElementById("feedback");
+
+let sfxRight = new Audio("assets/sfx/correct.wav");
+let sfxWrong = new Audio("assets/sfx/incorrect.wav");
+
+
