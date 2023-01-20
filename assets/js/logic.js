@@ -25,17 +25,24 @@ function questionClick(){
 
 }
 
-function startQuiz(){
+function clockTick(){
 
+}
+//function of behaviour when user selects start button on the index.html webpage
+function startQuiz(){
+    let startScreenElement = document.getElementById("start-screen");
+    startScreenElement.setAttribute("class", "hide");
+
+    questionsElement.removeAttribute("class");
+
+    timerID = setInterval(clockTick, 1000)
 }
 
 function quizEnd(){
 
 }
 
-function clockTick(){
 
-}
 
 function saveHighScore(){
 
