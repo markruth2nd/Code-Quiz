@@ -1,6 +1,6 @@
 let questions = [
     {
-        "title": "Common Data Types DO NOAT include",
+        "title": "Common Data Types DO NOT include",
         "choices": ["String", "Booleans", "Alerts", "Numbers"],
         "answer": "Alerts"
     },
