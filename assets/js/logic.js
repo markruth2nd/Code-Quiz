@@ -44,3 +44,11 @@ function saveHighScore(){
 function checkForEnter(event){
 
 }
+
+
+//Add event listeners for starting quiz, submiting answers:
+startButton.addEventListener("click", startQuiz);
+
+submitButton.addEventListener("click", saveHighScore);
+
+initialElement.addEventListener("keyup", checkForEnter);
