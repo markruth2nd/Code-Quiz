@@ -107,8 +107,9 @@ function startQuiz(){
 
 function saveHighScore(){
     let initials = initialElement.value.trim();
+    console.log(initials);
     if(initials !== ""){
-    let highscores = JSON.parse(localStorage.getItem("highscores") || []);
+    let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
     let newScore = {
         score: time,
         initials: initials
@@ -120,7 +121,9 @@ function saveHighScore(){
 }}
 
 function checkForEnter(event){
-
+    if(event.key === "Enter") {
+        saveHighScore();
+    }
 }
 
 
