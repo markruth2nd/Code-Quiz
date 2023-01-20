@@ -33,6 +33,20 @@ function questionClick(){
         sfxRight.play();
         feedBackElement.textContent = "Correct!";
     }
+
+    feedBackElement.setAttribute("class", "feedback");
+
+    setTimeout(function() {
+        feedBackElement.setAttribute("class", "feedback hide")
+    }, 1000);
+
+    currentQuestionIndex++;
+
+    if(currentQuestionIndex === questions.length) {
+        quizEnd()
+    } else {
+        getQuestion();
+    }
 }
 
 function getQuestion(){
@@ -92,8 +106,18 @@ function startQuiz(){
 }
 
 function saveHighScore(){
+    let initials = initialElement.value.trim();
+    if(initials !== ""){
+    let highscores = JSON.parse(localStorage.getItem("highscores") || []);
+    let newScore = {
+        score: time,
+        initials: initials
+    }
+    highscores.push(newScore);
+    localStorage.setItem("highscores", JSON.stringify(highscores));
 
-}
+    window.location.href = "highscores.html";
+}}
 
 function checkForEnter(event){
 
