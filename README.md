@@ -2,7 +2,7 @@
 
 GitHub Link: https://github.com/markruth2nd/Code-Quiz
 
-Deployed Link: 
+Deployed Link: https://markruth2nd.github.io/Code-Quiz/
 
 Purpose of this project:
 The purpose of this code is to work with some starter code and build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code. The aim is to have a clean, polished, and responsive user interface.
@@ -16,3 +16,8 @@ The Function created: getQuestion, question,Click, startQuize, quizEnd, clockTic
 Events: starButton, submitButton, initialElement(user initials)
 
 THE SCORES: JS file will need 2 functions to print high scores and the other to clearHighScores as well as code to allow the 'clear' button to use the clearHighScores function when the the user clicks the 'clear' button.
+
+Screen Shot:
+
+
+Screenshot 2023-01-23 at 20.04.09.png
