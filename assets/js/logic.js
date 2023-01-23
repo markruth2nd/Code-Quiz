@@ -1,6 +1,6 @@
 // Variables to keep track of quiz state:
 let currentQuestionIndex = 0;
-let time = questions.length * 15;
+let time = questions.length * 20;
 let timerID;
 
 //Add Elements from HTML files:
